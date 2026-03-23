@@ -1,0 +1,55 @@
+---
+title: "Balancing Experimental Efficiency and Accuracy in Optimization Trials in Public Health: A Simulation Study"
+author: "Ruoxiang Zheng¹, David Vanness², Jillian C. Strayhorn¹"
+output:
+  html_document:
+    theme: null
+    toc: false
+    df_print: paged
+---
+
+<style>
+body {
+  max-width: 700px;
+  margin: auto;
+  font-family: -apple-system, "Times New Roman", Arial;
+  line-height: 1.6;
+  font-size: 18px;
+  padding: 20px;
+}
+h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+h2 {
+  font-size: 22px;
+  margin-top: 25px;
+}
+</style>
+*¹ New York University · ² Penn State University*  
+
+# Abstract
+
+## Background
+Public health interventions are often multicomponent, containing multiple components (e.g. different therapies, digital tools, medications, and so on) that are intended to contribute to the intervention’s effectiveness. Increasingly, public health scholars who seek to build multicomponent interventions that are not only effective but also readily implementable are conducting factorial optimization trials, guided by the multiphase optimization strategy (MOST). Of various possible factorial trial designs, fractional $2^{k-1}$ designs have been recommended because they offer experimental efficiency. Relative to full $2^k$ factorials, fractional $2^{k-1}$ factorials estimate main effects for $k$ intervention components (and sometimes select interactions) via half the experimental conditions, saving experimental resources. However, using fractional factorial designs also risks obscuring more complex component interactions, indicating a tradeoff for public health scholars between experimental efficiency and statistical accuracy. In this simulation study, we investigate the implications for decision-making about a set of candidate intervention components: in plausible public health intervention scenarios, how successfully do fractional versus full factorial trials identify which intervention version is most effective?
+
+## Methods
+We simulated optimization trials for a hypothetical public health intervention with 5 candidate intervention components ($k$ = 5). We varied data-generating scenarios to create interventions with more complex component interactions and less complex component interactions. Using the true data-generating parameters, we identified in each of 32,000 cases which “true best” intervention maximized effectiveness. Then, across 128,000 associated simulated optimization trials (i.e., one full $2^5$ trial and one fractional $2^{5-1}$ trial for each case, with each of two sample sizes, $N$ = 640 and $N$ = 128), we modeled effectiveness using factorial regression. We quantified decision success in terms of mean loss, defined as the difference in effectiveness between the model's identified "true best" intervention and the intervention identified as best in the simulated trials.
+
+## Results
+Under conditions of lower intervention complexity, use of a fractional versus full factorial resulted in improved decision-making performance: especially when sample size was lower (+8% for $N$ = 640; +28% for $N$ = 128). These improvements decreased with increasing intervention complexity; under conditions of greatest complexity, use of a fractional factorial resulted in minorly reduced decision-making performance, relative to the full factorial (-7% for $N$ = 640; -2% for $N$ = 128)
+
+## Conclusion
+This simulation supports recommendations for the use of fractional factorial designs in public health intervention research; even in conditions of complexity, where the assumptions of fractional factorial designs are violated, selection of the optimized intervention does not suffer meaningfully.
+
+---
+
+## Contact
+Ruoxaing Zheng  
+Email: rz2968@nyu.edu  
+David Vanness  
+Email: djv76@psu.edu  
+Jillian C. Strayhorn  
+Email: jillian.strayhorn@nyu.edu  
+
+
